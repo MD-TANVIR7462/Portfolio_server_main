@@ -39,4 +39,4 @@ const startServer = async () => {
 startServer().catch((err) => {
   console.error('[Server Error]', err);
   process.exit(1);
-});
+}); 

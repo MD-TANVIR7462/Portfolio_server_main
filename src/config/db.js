@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import { ENV } from './env.js';
 
-<<<<<<< HEAD
 let cachedConnection = global.mongooseConnection;
 
 if (!cachedConnection) {
@@ -34,16 +33,4 @@ export const connectDB = async () => {
   }
 
   return cachedConnection.conn;
-=======
-export const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(ENV.MONGO_URI, {
-      autoIndex: true,
-    });
-    console.log(`[Database] MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.error(`[Database Error] ${error.message}`);
-    process.exit(1);
-  }
->>>>>>> 706d76db88cccd435e7f44a8e8a60c88bba25391
 };
